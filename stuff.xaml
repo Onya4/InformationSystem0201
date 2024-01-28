@@ -1,0 +1,58 @@
+﻿<Window x:Class="WpfApp1.stuff"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="stuff" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="115"/>
+            <ColumnDefinition Width="115"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="144.5"/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="56"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="1" Grid.Row="1"/>
+        <TextBox Grid.Column="3" Grid.ColumnSpan="10" Grid.Row="1"/>
+        <Button Grid.Column="14" Grid.Row="1" Click="Button_Click"/>
+        <DataGrid x:Name="table" Grid.Column="7" Grid.ColumnSpan="6" Grid.Row="3" Grid.RowSpan="3" SelectionChanged="tableChanged"/>
+        <Button Grid.Column="3" Grid.ColumnSpan="3" Content="ДОБАВИТЬ" Click="insert" Grid.Row="7"/>
+        <Button Grid.Column="7" Grid.ColumnSpan="2" Content="РЕДАКТИРОВАТЬ" Click="update" Grid.Row="7"/>
+        <Button Grid.Column="10" Grid.ColumnSpan="3" Content="УДАЛИТЬ" Click="delate" Grid.Row="7"/>
+        <TextBox x:Name="fio" Grid.Column="3" Grid.Row="3"/>
+        <TextBox x:Name="pasport" Grid.Column="5" Grid.Row="3"/>
+        <ComboBox x:Name="post" Grid.Column="3" Grid.Row="5">
+            <TextBlock>директор</TextBlock>
+            <TextBlock>руководитель</TextBlock>
+            <TextBlock>сотрудник</TextBlock>
+        </ComboBox>
+        <ComboBox x:Name="complaince" Grid.Column="5" Grid.Row="5">
+            <TextBlock>1</TextBlock>
+            <TextBlock>0</TextBlock>
+        </ComboBox>
+    </Grid>
+</Window>

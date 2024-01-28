@@ -1,0 +1,56 @@
+﻿<Window x:Class="WpfApp1.st"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="st" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="115"/>
+            <ColumnDefinition Width="115"/>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="113"/>
+            <ColumnDefinition Width="4"/>
+            <ColumnDefinition Width="25"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="110"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="17.5"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="17.5"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="4"/>
+            <RowDefinition Height="56"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Button Grid.Column="1" Grid.Row="1"/>
+        <TextBox Grid.Column="3" Grid.ColumnSpan="10" Grid.Row="1"/>
+        <Button Grid.Column="14" Grid.Row="1" Click="Button_Click"/>
+        <DataGrid x:Name="table" Grid.Column="7" Grid.ColumnSpan="6" Grid.Row="3" Grid.RowSpan="6" SelectionChanged="tableChanged"/>
+        <DataGrid x:Name="prod" Grid.Column="13" Grid.Row="3"/>
+        <DataGrid x:Name="requ" Grid.Column="13" Grid.Row="4"/>
+        <Button Grid.Column="3" Grid.ColumnSpan="3" Content="ДОБАВИТЬ" Click="insert" Grid.Row="10"/>
+        <ComboBox x:Name="reqID" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="4"/>
+        <ComboBox x:Name="prodID" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="6"/>
+        <ComboBox x:Name="number" Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="8">
+            <TextBlock>1</TextBlock>
+            <TextBlock>0</TextBlock>
+        </ComboBox>
+    </Grid>
+</Window>
